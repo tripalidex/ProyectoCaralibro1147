@@ -9,7 +9,6 @@ import UIKit
 import FirebaseAnalytics
 import FirebaseAuth
 import FirebaseFirestore
-import FirebaseFirestoreSwift
 
 class RegistrarViewController: UIViewController {
     
@@ -26,6 +25,8 @@ class RegistrarViewController: UIViewController {
     @IBOutlet var registerbtnImagen: UIButton!
     
     @IBOutlet var btnRegister: UIButton!
+    
+    private let db = Firestore.firestore()
     
     
     @IBAction private func tapTopCloseKeyboard(sender: UITapGestureRecognizer){
@@ -80,8 +81,12 @@ class RegistrarViewController: UIViewController {
     
     @IBAction func btnRegistrar(_ sender: Any) {
         if let email = registerEmail.text, let password = registerPassword.text {
-            Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            Auth.auth().createUser(withEmail: email, password: password)
+            { result, error in
                 if let result = result, error == nil {
+                    self.db.collection("users").document(email).setData([
+                        "Nombre" : self.registerNombre.text ?? "",
+                        "Apellido" : self.registerApellido.text ?? ""])
                     self.navigationController?
                         .pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
                 } else {

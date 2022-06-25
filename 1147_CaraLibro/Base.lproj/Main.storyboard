@@ -138,6 +138,7 @@
                     <navigationItem key="navigationItem" title="CARALIBRO" id="Lb5-Dj-EOQ"/>
                     <connections>
                         <outlet property="btnLogin" destination="1ae-Ub-n5R" id="Zu0-u2-VAw"/>
+                        <outlet property="loginEmail" destination="ylo-g9-LiU" id="due-Zl-5aR"/>
                         <outlet property="loginEnail" destination="ylo-g9-LiU" id="NLu-hn-aIz"/>
                         <outlet property="loginPassword" destination="Axu-Sq-pMg" id="cP2-B4-aFu"/>
                     </connections>
