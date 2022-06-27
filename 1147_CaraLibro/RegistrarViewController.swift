@@ -24,7 +24,6 @@ class RegistrarViewController: UIViewController {
     
     @IBOutlet var registerbtnImagen: UIButton!
     
-    @IBOutlet var btnRegister: UIButton!
     
     private let db = Firestore.firestore()
     
@@ -85,13 +84,13 @@ class RegistrarViewController: UIViewController {
             { result, error in
                 if let result = result, error == nil {
                     self.db.collection("users").document(email).setData([
-                        "Nombre" : self.registerNombre.text ?? "",
-                        "Apellido" : self.registerApellido.text ?? ""])
+                                            "Nombre" : self.registerNombre.text ?? "",
+                                            "Apellido" : self.registerApellido.text ?? ""])
                     self.navigationController?
                         .pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
                 } else {
                     let alertController = UIAlertController(title: "Error",
-                                                            message: "Se ha producido un error iniciando sesión", preferredStyle: .alert)
+                                                            message: "Se ha producido un error al crear la cuenta", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     
                     self.present(alertController, animated: true, completion: nil)

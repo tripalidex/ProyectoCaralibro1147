@@ -36,5 +36,22 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Inicio"
+        
+        homeEmail.text = email
+        homeProveedor.text = provider.rawValue
+    }
+    @IBAction func cerrarSecion(_ sender: Any) {
+        
+        switch provider {
+        case .basic:
+            do{
+                try Auth.auth().signOut()
+                navigationController?.popViewController(animated: true)
+               
+            }
+            catch{
+                //se prodeuce un error
+            }
+        }
     }
 }
