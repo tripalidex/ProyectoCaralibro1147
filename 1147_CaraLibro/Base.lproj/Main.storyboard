@@ -407,6 +407,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Agregar foto">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="selecionarFoto:" destination="4GI-gn-ka5" eventType="touchUpInside" id="uew-li-8MH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QnP-lu-Ubg"/>
@@ -437,7 +440,6 @@
                         <outlet property="registerImagen" destination="w4b-cX-4ee" id="DKz-YY-nTG"/>
                         <outlet property="registerNombre" destination="Ky9-6C-n4K" id="gZR-bA-Unt"/>
                         <outlet property="registerPassword" destination="w5o-uO-hyW" id="msO-X6-Ybf"/>
-                        <outlet property="registerbtnImagen" destination="IKS-83-aga" id="yJD-Fz-29w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P66-K8-F5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -23,5 +23,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>permite usar una foto</string>
+	<key>NSCameraUsageDescription</key>
+	<string>permite tomar una foto</string>
 </dict>
 </plist>
