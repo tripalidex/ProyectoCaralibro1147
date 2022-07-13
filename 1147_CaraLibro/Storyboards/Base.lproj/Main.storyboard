@@ -181,8 +181,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bP-px-Y8H">
-                                <rect key="frame" x="20" y="343" width="374" height="128"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bP-px-Y8H">
+                                <rect key="frame" x="20" y="343" width="374" height="101"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electronico:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CF-3K-P4g">
                                         <rect key="frame" x="15" y="15" width="344" height="22"/>
@@ -219,9 +219,6 @@
                                 <state key="normal" title="Enviar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="5zi-v0-v4E" kind="showDetail" id="cfp-xV-FKF"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recupera tu contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrU-lW-BaG">
                                 <rect key="frame" x="60" y="84" width="294" height="24"/>
@@ -235,9 +232,9 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0bP-px-Y8H" firstAttribute="leading" secondItem="aIe-7V-kgx" secondAttribute="leading" constant="20" id="29r-eC-D15"/>
-                            <constraint firstItem="0bP-px-Y8H" firstAttribute="top" secondItem="aIe-7V-kgx" secondAttribute="top" constant="255" id="5c9-Ze-ROo"/>
                             <constraint firstItem="aIe-7V-kgx" firstAttribute="trailing" secondItem="egt-yG-6wp" secondAttribute="trailing" constant="20" id="MDG-ZG-rDH"/>
                             <constraint firstItem="XrU-lW-BaG" firstAttribute="top" secondItem="aIe-7V-kgx" secondAttribute="top" constant="40" id="TD6-3h-fCJ"/>
+                            <constraint firstItem="0bP-px-Y8H" firstAttribute="top" secondItem="XrU-lW-BaG" secondAttribute="bottom" constant="235" id="UmZ-7j-NsC"/>
                             <constraint firstItem="XrU-lW-BaG" firstAttribute="leading" secondItem="aIe-7V-kgx" secondAttribute="leading" constant="60" id="Vr2-Mk-tnW"/>
                             <constraint firstItem="aIe-7V-kgx" firstAttribute="trailing" secondItem="XrU-lW-BaG" secondAttribute="trailing" constant="60" id="bx4-5g-JwE"/>
                             <constraint firstItem="aIe-7V-kgx" firstAttribute="bottom" secondItem="egt-yG-6wp" secondAttribute="bottom" constant="40" id="hB2-Gd-E6c"/>
@@ -264,11 +261,11 @@
             <objects>
                 <viewController id="5zi-v0-v4E" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wtT-9n-TdB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWs-M8-a3a">
-                                <rect key="frame" x="20" y="313.5" width="374" height="215"/>
+                                <rect key="frame" x="20" y="340.5" width="374" height="215"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codigo de verificacion: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0n-EI-bnq">
                                         <rect key="frame" x="15" y="15" width="344" height="22"/>
@@ -297,7 +294,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwr-rS-Apu">
-                                <rect key="frame" x="20" y="766" width="374" height="36"/>
+                                <rect key="frame" x="20" y="786" width="374" height="36"/>
                                 <color key="backgroundColor" red="0.1035440792" green="0.38728602070000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -313,7 +310,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xnY-bU-Z9m"/>
-                        <color key="backgroundColor" red="0.040208741399999998" green="0.15039279480000001" blue="0.38832487310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.0" green="0.16667065019999999" blue="0.4044890404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="B8m-DD-O7w" firstAttribute="leading" secondItem="xnY-bU-Z9m" secondAttribute="leading" constant="30" id="9YQ-B3-C1k"/>
                             <constraint firstItem="Zwr-rS-Apu" firstAttribute="leading" secondItem="xnY-bU-Z9m" secondAttribute="leading" constant="20" id="Jye-ms-4Zc"/>
