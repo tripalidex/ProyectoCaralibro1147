@@ -25,8 +25,21 @@ class RegistrarViewController: UIViewController{
     
     @IBOutlet var registerbtnImagen: UIButton!
     
+    private let email : String
+    private let provider: ProviderType
+    
     
     private let db = Firestore.firestore()
+    
+    init(email: String, provider: ProviderType){
+        self.email = email
+        self.provider = provider
+        super.init(nibName: "RegistrarViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     
     @IBAction private func tapTopCloseKeyboard(sender: UITapGestureRecognizer){
@@ -93,6 +106,7 @@ class RegistrarViewController: UIViewController{
             { result, error in
                 if let result = result, error == nil {
                     self.db.collection("users").document(email).setData([
+                                            "provider" : provider.rawValue,
                                             "Nombre" : self.registerNombre.text ?? "",
                                             "Apellido" : self.registerApellido.text ?? ""])
                     self.navigationController?
