@@ -70,8 +70,9 @@ class LoginViewController: UIViewController {
         if let email = loginEmail.text, let password = loginPassword.text {
             Auth.auth().signIn(withEmail: email, password: password) { result, error in
                 if let result = result, error == nil {
-                    self.navigationController?
-                        .pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
+                 let storyBoard = UIStoryboard (name: "Main", bundle: nil)
+                 let controller = storyBoard.instantiateViewController(withIdentifier: "ContactosViewController") as? ContactosViewController
+                    self.navigationController?.pushViewController(controller ?? ContactosViewController() , animated: true)
                 } else {
                     let alertController = UIAlertController(title: "Error",
                                                             message: "Se ha producido un error iniciando sesión", preferredStyle: .alert)

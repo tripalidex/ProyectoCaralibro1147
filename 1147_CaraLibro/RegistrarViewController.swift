@@ -25,21 +25,11 @@ class RegistrarViewController: UIViewController{
     
     @IBOutlet var registerbtnImagen: UIButton!
     
-    private let email : String
-    private let provider: ProviderType
-    
     
     private let db = Firestore.firestore()
     
-    init(email: String, provider: ProviderType){
-        self.email = email
-        self.provider = provider
-        super.init(nibName: "RegistrarViewController", bundle: nil)
-    }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    
     
     
     @IBAction private func tapTopCloseKeyboard(sender: UITapGestureRecognizer){
@@ -102,15 +92,11 @@ class RegistrarViewController: UIViewController{
     }
     @IBAction func btnRegistrar(_ sender: Any) {
         if let email = registerEmail.text, let password = registerPassword.text {
-            Auth.auth().createUser(withEmail: email, password: password)
-            { result, error in
-                if let result = result, error == nil {
-                    self.db.collection("users").document(email).setData([
-                                            "provider" : provider.rawValue,
-                                            "Nombre" : self.registerNombre.text ?? "",
-                                            "Apellido" : self.registerApellido.text ?? ""])
-                    self.navigationController?
-                        .pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
+            Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                            if let result = result, error == nil {
+                             let storyBoard = UIStoryboard (name: "Main", bundle: nil)
+                             let controller = storyBoard.instantiateViewController(withIdentifier: "ContactosViewController") as? ContactosViewController
+                                self.navigationController?.pushViewController(controller ?? ContactosViewController() , animated: true)
                 } else {
                     let alertController = UIAlertController(title: "Error",
                                                             message: "Se ha producido un error al crear la cuenta", preferredStyle: .alert)
