@@ -12,6 +12,9 @@
 		0144253F2866BC1700AE4579 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0144253E2866BC1700AE4579 /* FirebaseDatabase */; };
 		014425412866BC1700AE4579 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 014425402866BC1700AE4579 /* FirebaseFirestore */; };
 		014425432866BD8200AE4579 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014425422866BD8200AE4579 /* HomeViewController.swift */; };
+		0165204B2884779E00010332 /* contactos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165204A2884779E00010332 /* contactos.swift */; };
+		0165204E288478F700010332 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165204D288478F700010332 /* ViewModel.swift */; };
+		0165205028847BA000010332 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165204F28847BA000010332 /* ContentView.swift */; };
 		0167D50C286A48AB000F0FD9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0167D50B286A48AB000F0FD9 /* HomeViewController.xib */; };
 		0167D50F286A6D42000F0FD9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0167D50E286A6D42000F0FD9 /* FirebaseFirestoreSwift */; };
 		01C943BB288389E800D6CD31 /* DetallesRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C943BA288389E800D6CD31 /* DetallesRegisterViewController.swift */; };
@@ -32,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		014425422866BD8200AE4579 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0165204A2884779E00010332 /* contactos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactos.swift; sourceTree = "<group>"; };
+		0165204D288478F700010332 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		0165204F28847BA000010332 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0167D50B286A48AB000F0FD9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		01C943BA288389E800D6CD31 /* DetallesRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesRegisterViewController.swift; sourceTree = "<group>"; };
 		7C18F5C1285A2C3A00B78018 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -67,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		016520492884775A00010332 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				0165204A2884779E00010332 /* contactos.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		0167D50D286A6D42000F0FD9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +108,7 @@
 		7C2CA97B283091C200AC6023 /* 1147_CaraLibro */ = {
 			isa = PBXGroup;
 			children = (
+				016520492884775A00010332 /* models */,
 				7CE0149E287B801A0030A536 /* Storyboards */,
 				7C2CA97C283091C200AC6023 /* AppDelegate.swift */,
 				7C2CA97E283091C200AC6023 /* SceneDelegate.swift */,
@@ -109,6 +124,8 @@
 				7CE014A3287E6AFE0030A536 /* DetailContactoViewController.swift */,
 				7CE014A5287E6BA00030A536 /* DetailUsuarioViewController.swift */,
 				01C943BA288389E800D6CD31 /* DetallesRegisterViewController.swift */,
+				0165204D288478F700010332 /* ViewModel.swift */,
+				0165204F28847BA000010332 /* ContentView.swift */,
 			);
 			path = 1147_CaraLibro;
 			sourceTree = "<group>";
@@ -211,11 +228,14 @@
 				7CE014A6287E6BA00030A536 /* DetailUsuarioViewController.swift in Sources */,
 				7CE014A0287B828A0030A536 /* ContactosViewController.swift in Sources */,
 				7CE014A4287E6AFE0030A536 /* DetailContactoViewController.swift in Sources */,
+				0165204B2884779E00010332 /* contactos.swift in Sources */,
 				7C2CA97D283091C200AC6023 /* AppDelegate.swift in Sources */,
 				01C943BB288389E800D6CD31 /* DetallesRegisterViewController.swift in Sources */,
 				7C2CA995283092BC00AC6023 /* OlvidarContraViewController.swift in Sources */,
 				7C2CA9932830928000AC6023 /* RegistrarViewController.swift in Sources */,
 				7C2CA97F283091C200AC6023 /* SceneDelegate.swift in Sources */,
+				0165205028847BA000010332 /* ContentView.swift in Sources */,
+				0165204E288478F700010332 /* ViewModel.swift in Sources */,
 				014425432866BD8200AE4579 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

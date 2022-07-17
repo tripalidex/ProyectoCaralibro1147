@@ -17,8 +17,11 @@ class RegistrarViewController: UIViewController{
     
     @IBOutlet var registerPassword: UITextField!
     
-  
+
+    @IBOutlet var TXTnombre: UITextField!
     
+    
+    @IBOutlet var TXTapellido: UITextField!
     
     private let db = Firestore.firestore()
     
@@ -78,9 +81,33 @@ class RegistrarViewController: UIViewController{
     
     
     @IBAction func btnRegistrar(_ sender: Any) {
+        let  nombres = TXTnombre.text!
+        let apellidos = TXTapellido.text!
         if let email = registerEmail.text, let password = registerPassword.text {
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
                             if let result = result, error == nil {
+                                
+                                if(error != nil)
+                                {
+                                    
+                                }
+                                
+                                else
+                                {
+                                    self.db.collection("users").document(result.user.uid).setData(["email": email,"nombres": nombres,"apellidos": apellidos,"Id": result.user.uid]){
+                                    error in
+                                        if let error = error {
+                                            print("Error Usuario")
+                                        }
+                                        
+                                        else {
+                                            print("Document successfully")
+                                        }
+                                    }
+                                }
+                            
+                                
+            
                              let storyBoard = UIStoryboard (name: "Main", bundle: nil)
                              let controller = storyBoard.instantiateViewController(withIdentifier: "DetallesRegisterViewController") as? DetallesRegisterViewController
                                 self.navigationController?.pushViewController(controller ?? DetallesRegisterViewController() , animated: true)
@@ -95,5 +122,7 @@ class RegistrarViewController: UIViewController{
         }
     }
 }
+    
+
 
 
