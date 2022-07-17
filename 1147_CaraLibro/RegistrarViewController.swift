@@ -17,13 +17,7 @@ class RegistrarViewController: UIViewController{
     
     @IBOutlet var registerPassword: UITextField!
     
-    @IBOutlet var registerNombre: UITextField!
-    
-    @IBOutlet var registerApellido: UITextField!
-    
-    @IBOutlet var registerImagen: UIImageView!
-    
-    @IBOutlet var registerbtnImagen: UIButton!
+  
     
     
     private let db = Firestore.firestore()
@@ -82,21 +76,14 @@ class RegistrarViewController: UIViewController{
         print("TECLADO DESAPARECE")
     }
     
-    @IBAction func selecionarFoto(_ sender: Any) {
-        let vc = UIImagePickerController()
-        vc.sourceType = .photoLibrary
-        vc.delegate = self
-        vc.allowsEditing = true
-        present(vc, animated: true)
-        
-    }
+    
     @IBAction func btnRegistrar(_ sender: Any) {
         if let email = registerEmail.text, let password = registerPassword.text {
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
                             if let result = result, error == nil {
                              let storyBoard = UIStoryboard (name: "Main", bundle: nil)
-                             let controller = storyBoard.instantiateViewController(withIdentifier: "ContactosViewController") as? ContactosViewController
-                                self.navigationController?.pushViewController(controller ?? ContactosViewController() , animated: true)
+                             let controller = storyBoard.instantiateViewController(withIdentifier: "DetallesRegisterViewController") as? DetallesRegisterViewController
+                                self.navigationController?.pushViewController(controller ?? DetallesRegisterViewController() , animated: true)
                 } else {
                     let alertController = UIAlertController(title: "Error",
                                                             message: "Se ha producido un error al crear la cuenta", preferredStyle: .alert)
@@ -109,19 +96,4 @@ class RegistrarViewController: UIViewController{
     }
 }
 
-extension RegistrarViewController: UIImagePickerControllerDelegate , UINavigationControllerDelegate{
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let imagen = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
-            registerImagen.image = imagen
-        }
-        
-        picker.dismiss(animated: true , completion: nil)
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
-        picker.dismiss(animated: true , completion: nil)
-        
-    }
-}
+
