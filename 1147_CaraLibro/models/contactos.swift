@@ -8,7 +8,7 @@
 import Foundation
 
 struct contactos: Identifiable{
-    var id: String
+    var id: String = UUID().uuidString
     var email: String
     var nombres: String
     var apellidos: String

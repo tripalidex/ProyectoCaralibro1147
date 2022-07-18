@@ -15,6 +15,7 @@
 		0165204B2884779E00010332 /* contactos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165204A2884779E00010332 /* contactos.swift */; };
 		0165204E288478F700010332 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165204D288478F700010332 /* ViewModel.swift */; };
 		0165205028847BA000010332 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165204F28847BA000010332 /* ContentView.swift */; };
+		0165C1222884E5BE006F6F40 /* contactoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165C1212884E5BE006F6F40 /* contactoViewModel.swift */; };
 		0167D50C286A48AB000F0FD9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0167D50B286A48AB000F0FD9 /* HomeViewController.xib */; };
 		0167D50F286A6D42000F0FD9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0167D50E286A6D42000F0FD9 /* FirebaseFirestoreSwift */; };
 		01C943BB288389E800D6CD31 /* DetallesRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C943BA288389E800D6CD31 /* DetallesRegisterViewController.swift */; };
@@ -38,6 +39,7 @@
 		0165204A2884779E00010332 /* contactos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactos.swift; sourceTree = "<group>"; };
 		0165204D288478F700010332 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		0165204F28847BA000010332 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0165C1212884E5BE006F6F40 /* contactoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactoViewModel.swift; sourceTree = "<group>"; };
 		0167D50B286A48AB000F0FD9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		01C943BA288389E800D6CD31 /* DetallesRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesRegisterViewController.swift; sourceTree = "<group>"; };
 		7C18F5C1285A2C3A00B78018 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				01C943BA288389E800D6CD31 /* DetallesRegisterViewController.swift */,
 				0165204D288478F700010332 /* ViewModel.swift */,
 				0165204F28847BA000010332 /* ContentView.swift */,
+				0165C1212884E5BE006F6F40 /* contactoViewModel.swift */,
 			);
 			path = 1147_CaraLibro;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				7C2CA9912830920600AC6023 /* LoginViewController.swift in Sources */,
 				7CE014A6287E6BA00030A536 /* DetailUsuarioViewController.swift in Sources */,
 				7CE014A0287B828A0030A536 /* ContactosViewController.swift in Sources */,
+				0165C1222884E5BE006F6F40 /* contactoViewModel.swift in Sources */,
 				7CE014A4287E6AFE0030A536 /* DetailContactoViewController.swift in Sources */,
 				0165204B2884779E00010332 /* contactos.swift in Sources */,
 				7C2CA97D283091C200AC6023 /* AppDelegate.swift in Sources */,

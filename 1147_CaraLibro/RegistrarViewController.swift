@@ -109,8 +109,8 @@ class RegistrarViewController: UIViewController{
                                 
             
                              let storyBoard = UIStoryboard (name: "Main", bundle: nil)
-                             let controller = storyBoard.instantiateViewController(withIdentifier: "DetallesRegisterViewController") as? DetallesRegisterViewController
-                                self.navigationController?.pushViewController(controller ?? DetallesRegisterViewController() , animated: true)
+                             let controller = storyBoard.instantiateViewController(withIdentifier: "ContactosViewController") as? ContactosViewController
+                                self.navigationController?.pushViewController(controller ?? ContactosViewController() , animated: true)
                 } else {
                     let alertController = UIAlertController(title: "Error",
                                                             message: "Se ha producido un error al crear la cuenta", preferredStyle: .alert)
