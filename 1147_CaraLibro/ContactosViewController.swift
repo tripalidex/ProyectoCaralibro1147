@@ -59,18 +59,15 @@ class ContactosViewController: UIViewController {
 }
 
 extension ContactosViewController: UITableViewDataSource{
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.list.count
+        return 1
     }
-        
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-        
-            let cell = tableView.dequeueReusableCell(withIdentifier: "contacto", for: indexPath)
-        cell.textLabel! =
-            return cell
+        return UITableViewCell()
     }
+    
+    
+    
  
 }

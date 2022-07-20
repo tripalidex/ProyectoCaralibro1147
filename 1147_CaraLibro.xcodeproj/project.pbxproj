@@ -18,7 +18,12 @@
 		0165C1222884E5BE006F6F40 /* contactoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0165C1212884E5BE006F6F40 /* contactoViewModel.swift */; };
 		0167D50C286A48AB000F0FD9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0167D50B286A48AB000F0FD9 /* HomeViewController.xib */; };
 		0167D50F286A6D42000F0FD9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0167D50E286A6D42000F0FD9 /* FirebaseFirestoreSwift */; };
+		016CABDF2887CE950036E7E0 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CABDE2887CE950036E7E0 /* DataBaseManager.swift */; };
+		016CABE12887CFB70036E7E0 /* ConsultasBD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CABE02887CFB70036E7E0 /* ConsultasBD.swift */; };
+		016CABE32887D5F90036E7E0 /* RespuestaGenerica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CABE22887D5F90036E7E0 /* RespuestaGenerica.swift */; };
+		016CABE52887D9640036E7E0 /* closhure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016CABE42887D9640036E7E0 /* closhure.swift */; };
 		01C943BB288389E800D6CD31 /* DetallesRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C943BA288389E800D6CD31 /* DetallesRegisterViewController.swift */; };
+		01E3F8B12887DEF800C89C5F /* contactosBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E3F8B02887DEF800C89C5F /* contactosBE.swift */; };
 		7C18F5C2285A2C3A00B78018 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C18F5C1285A2C3A00B78018 /* GoogleService-Info.plist */; };
 		7C2CA97D283091C200AC6023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2CA97C283091C200AC6023 /* AppDelegate.swift */; };
 		7C2CA97F283091C200AC6023 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2CA97E283091C200AC6023 /* SceneDelegate.swift */; };
@@ -41,7 +46,12 @@
 		0165204F28847BA000010332 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0165C1212884E5BE006F6F40 /* contactoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactoViewModel.swift; sourceTree = "<group>"; };
 		0167D50B286A48AB000F0FD9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		016CABDE2887CE950036E7E0 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		016CABE02887CFB70036E7E0 /* ConsultasBD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultasBD.swift; sourceTree = "<group>"; };
+		016CABE22887D5F90036E7E0 /* RespuestaGenerica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespuestaGenerica.swift; sourceTree = "<group>"; };
+		016CABE42887D9640036E7E0 /* closhure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = closhure.swift; sourceTree = "<group>"; };
 		01C943BA288389E800D6CD31 /* DetallesRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesRegisterViewController.swift; sourceTree = "<group>"; };
+		01E3F8B02887DEF800C89C5F /* contactosBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactosBE.swift; sourceTree = "<group>"; };
 		7C18F5C1285A2C3A00B78018 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C2CA979283091C200AC6023 /* 1147_CaraLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1147_CaraLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2CA97C283091C200AC6023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +100,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		016CABDD2887CE700036E7E0 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				016CABDE2887CE950036E7E0 /* DataBaseManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		01E3F8AF2887DEDD00C89C5F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		7C2CA970283091C200AC6023 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +135,8 @@
 		7C2CA97B283091C200AC6023 /* 1147_CaraLibro */ = {
 			isa = PBXGroup;
 			children = (
+				01E3F8AF2887DEDD00C89C5F /* New Group */,
+				016CABDD2887CE700036E7E0 /* Firebase */,
 				016520492884775A00010332 /* models */,
 				7CE0149E287B801A0030A536 /* Storyboards */,
 				7C2CA97C283091C200AC6023 /* AppDelegate.swift */,
@@ -129,6 +156,10 @@
 				0165204D288478F700010332 /* ViewModel.swift */,
 				0165204F28847BA000010332 /* ContentView.swift */,
 				0165C1212884E5BE006F6F40 /* contactoViewModel.swift */,
+				016CABE02887CFB70036E7E0 /* ConsultasBD.swift */,
+				016CABE22887D5F90036E7E0 /* RespuestaGenerica.swift */,
+				016CABE42887D9640036E7E0 /* closhure.swift */,
+				01E3F8B02887DEF800C89C5F /* contactosBE.swift */,
 			);
 			path = 1147_CaraLibro;
 			sourceTree = "<group>";
@@ -231,15 +262,20 @@
 				7CE014A6287E6BA00030A536 /* DetailUsuarioViewController.swift in Sources */,
 				7CE014A0287B828A0030A536 /* ContactosViewController.swift in Sources */,
 				0165C1222884E5BE006F6F40 /* contactoViewModel.swift in Sources */,
+				016CABDF2887CE950036E7E0 /* DataBaseManager.swift in Sources */,
 				7CE014A4287E6AFE0030A536 /* DetailContactoViewController.swift in Sources */,
 				0165204B2884779E00010332 /* contactos.swift in Sources */,
 				7C2CA97D283091C200AC6023 /* AppDelegate.swift in Sources */,
 				01C943BB288389E800D6CD31 /* DetallesRegisterViewController.swift in Sources */,
+				01E3F8B12887DEF800C89C5F /* contactosBE.swift in Sources */,
 				7C2CA995283092BC00AC6023 /* OlvidarContraViewController.swift in Sources */,
 				7C2CA9932830928000AC6023 /* RegistrarViewController.swift in Sources */,
 				7C2CA97F283091C200AC6023 /* SceneDelegate.swift in Sources */,
 				0165205028847BA000010332 /* ContentView.swift in Sources */,
 				0165204E288478F700010332 /* ViewModel.swift in Sources */,
+				016CABE52887D9640036E7E0 /* closhure.swift in Sources */,
+				016CABE32887D5F90036E7E0 /* RespuestaGenerica.swift in Sources */,
+				016CABE12887CFB70036E7E0 /* ConsultasBD.swift in Sources */,
 				014425432866BD8200AE4579 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
